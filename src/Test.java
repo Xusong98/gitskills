@@ -1,9 +1,14 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class Test {
     public static void main(String[] args) {
-        String[] str = {"a", "b", "c", "d"};
-        int index = 2;
-        for (int i = 0; i <= index; i++) {
-            System.out.println(str[i]);
-        }
+        Map map = new HashMap();
+        map.put("a", "1");
+        map.put("b", "1");
+        map.put("c", "1");
+        map.put("d", "1");
+
+        System.out.println(map.entrySet());
     }
 }

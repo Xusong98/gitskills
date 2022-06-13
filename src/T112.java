@@ -1,19 +1,13 @@
 public class T112 {
-    public static void main(String[] args) {
-
-    }
 
     public static boolean hasPathSum(TreeNode root, int targetSum) {
         if (root == null) {
             return false;
         }
-        return true;
-    }
-
-    public static int temp(TreeNode root, int temp) {
-        int value = 0;
-
-
-        return 0;
+        if (root.left == null && root.right == null) {
+            return targetSum - root.val == 0;
+        }
+        targetSum -= root.val;
+        return hasPathSum(root.left, targetSum) || hasPathSum(root.right, targetSum);
     }
 }
